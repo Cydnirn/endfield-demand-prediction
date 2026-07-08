@@ -1,0 +1,11 @@
+terraform
+.pytest*
+AGENTS*
+
+SPECS*
+RESOURCES*
+example*
+
+sample*
+
+__pycache__

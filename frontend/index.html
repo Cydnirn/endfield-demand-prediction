@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endfield Demand Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Endfield Demand Forecast</h1>
+    <p class="header-subtitle">Retail demand prediction for store‑item combinations</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <form id="forecast-form" novalidate>
+        <div class="form-group">
+          <label for="store-id">Store ID</label>
+          <input type="text" id="store-id" placeholder="e.g., S001" required autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="item-id">Item ID</label>
+          <input type="text" id="item-id" placeholder="e.g., P0001" required autocomplete="off">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="horizon">Horizon (days)</label>
+            <input type="number" id="horizon" min="1" max="30" value="1" required>
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn">Get Forecast</button>
+      </form>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Fetching forecast</p>&hellip;</p>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+      <div id="results" class="results hidden">
+        <h2>Forecast Results</h2>
+</h2>        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+             </th> <th>Forecasted Demand</th></th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Endfield &mdash; Demand Forecasting Platform</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
