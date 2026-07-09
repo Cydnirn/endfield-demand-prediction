@@ -67,9 +67,7 @@
     
 2. Under **Permissions**, choose an IAM role with `sagemaker:InvokeEndpoint` and `logs:CreateLogGroup` etc.
     
-3. Paste the Lambda code from [SPECS.md](https://specs.md/) (adjust the endpoint name and any helper functions).
-    
-4. Set environment variable `ENDPOINT_NAME` = `endfield-forecast-endpoint`.
+3. Set environment variable `ENDPOINT_NAME` = `endfield-forecast-endpoint`.
   
 ---
 
